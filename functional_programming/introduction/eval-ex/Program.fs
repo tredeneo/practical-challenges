@@ -11,16 +11,9 @@ let rec factorial =
 
 let exp arr =
     let series arr =
-        printfn "entrei"
+        [ 0..9 ]
+        |> List.sumBy (fun x -> Math.Pow(arr, float x) / (float (factorial x)))
 
-        let a =
-            [ 0..9 ]
-            |> List.sumBy (fun x ->
-                MathF.Pow(float32 arr, float32 x)
-                / (float32 (factorial x)))
-
-        printfn "passei"
-        a
 
     arr |> List.map (series)
 
