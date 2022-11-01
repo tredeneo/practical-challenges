@@ -20,21 +20,3 @@ let playPass (s: string) (shift: int) : string =
     |> Seq.toArray
     |> String
 
-
-let testComplement original valor esperado =
-    let tmp = playPass original valor
-
-    if tmp = esperado then
-        printfn "%A" tmp
-    else
-        printfn
-            " original:%s 
-            \r esperado:%s
-            \r resultado:%s\n"
-            original
-            esperado
-            tmp
-
-testComplement "I LOVE YOU!!!" 1 "!!!vPz fWpM J"
-testComplement "I LOVE YOU!!!" 0 "!!!uOy eVoL I"
-testComplement "MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015" 2 "4897 NkTrC Hq fT67 GjV Pq aP OqTh gOcE CoPcTi aO"
